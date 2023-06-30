@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>P1-P2 Outage Communication</h1>
+    <div>        
+        <input type="file" id="hiddenField" (change)="uploadFile($event)" placeholder="Upload file" src="C:/Users/10685554/Downloads/a.xlsx" value="C:/Users/10685554/Downloads/a.xlsx">        
+    </div>      
+    <form [formGroup]="form" style="display: block;" id="Ro">
+        
+        <div class="form-group">
+            <label for="website">Website:</label>
+            <select formControlName="website" class="form-control" (change)="dispAlert()">
+                
+                <option>Choose Website</option>
+                <option *ngFor="let web of websiteList">{{web}}</option>
+            </select>
+            
+        </div>
+       
+       
+    </form>
+</div>
+<router-outlet></router-outlet>
